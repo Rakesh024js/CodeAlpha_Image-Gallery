@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Gallery with Filters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📸 Image Gallery with Filters</h1>
+
+  <div class="filter-btns">
+    <button class="active" onclick="filterImages('all', event)">All</button>
+    <button onclick="filterImages('nature', event)">Nature</button>
+    <button onclick="filterImages('animals', event)">Animals</button>
+    <button onclick="filterImages('cities', event)">Cities</button>
+  </div>
+
+  <div class="gallery">
+    <img src="https://picsum.photos/id/1015/600/400" alt="Nature 1" data-category="nature">
+    <img src="https://picsum.photos/id/1016/600/400" alt="Nature 2" data-category="nature">
+    <img src="https://picsum.photos/id/1018/600/400" alt="Nature 3" data-category="nature">
+    <img src="https://picsum.photos/id/1020/600/400" alt="Nature 4" data-category="nature">
+    <img src="https://picsum.photos/id/1021/600/400" alt="Nature 5" data-category="nature">
+    <img src="https://picsum.photos/id/1043/600/400" alt="City 1" data-category="cities">
+    <img src="https://picsum.photos/id/1031/600/400" alt="City 2" data-category="cities">
+    <img src="https://picsum.photos/id/1035/600/400" alt="City 3" data-category="cities">
+    <img src="https://picsum.photos/id/1050/600/400" alt="City 4" data-category="cities">
+    <img src="https://picsum.photos/id/1060/600/400" alt="City 5" data-category="cities">
+     <img src="https://picsum.photos/id/1025/600/400" alt="Dog" data-category="animals">
+    <img src="https://picsum.photos/id/1024/600/400" alt="Cat" data-category="animals">
+    <img src="https://picsum.photos/id/237/600/400" alt="Puppy" data-category="animals">
+    <img src="https://picsum.photos/id/433/600/400" alt="Horse" data-category="animals">
+    <img src="https://picsum.photos/id/593/600/400" alt="Bird" data-category="animals">
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+    <img id="lightbox-img">
+    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
